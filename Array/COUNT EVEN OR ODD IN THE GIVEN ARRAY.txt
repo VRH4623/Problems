@@ -1,0 +1,23 @@
+#include<stdio.h>
+void count_odd_even(int no_ele,long long int arr[])
+{  
+    int index,even=0,odd=0;
+    for(index=0;index<no_ele;index++)
+   {
+   if(arr[index]%2==0)
+   even++;
+   else
+   odd++;
+   }
+    printf("Odd = %d\nEven = %d",odd,even);
+}
+int main()
+{
+int no_ele,index;
+scanf("%d",&no_ele);
+long long int arr[no_ele];
+for(index=0;index<no_ele;index++)
+scanf("%lld",&arr[index]);
+count_odd_even(no_ele,arr);
+return 0;
+}
