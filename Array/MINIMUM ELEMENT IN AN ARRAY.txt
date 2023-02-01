@@ -1,0 +1,23 @@
+#include<stdio.h>
+long long int smallest_ele(int no_ele,long long int arr[])
+{
+    long long int smallest;
+    int index;
+smallest = arr[0];
+for (index = 1; index < no_ele; index++)
+{
+if (smallest > arr[index])
+smallest = arr[index];
+}
+  return smallest;
+}
+int main()
+{
+int  no_ele, index;
+scanf("%d", &no_ele);
+long long int arr[no_ele];
+for (index = 0; index < no_ele; index++)
+scanf("%lld", &arr[index]);
+printf("%lld",smallest_ele(no_ele,arr));
+return 0;
+}
