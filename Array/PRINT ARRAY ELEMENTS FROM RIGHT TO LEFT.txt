@@ -1,0 +1,17 @@
+#include<stdio.h>
+void print_right_to_left(int no_ele,long long int arr[])
+{  
+  int index;
+  for(index=no_ele-1;index>=0;index--)
+    printf("%lld ",arr[index]);
+}
+int main()
+{
+int no_ele,index;
+scanf("%d",&no_ele);
+long long int arr[no_ele];
+for(index=0;index<no_ele;index++)
+scanf("%lld",&arr[index]);
+print_right_to_left(no_ele,arr);
+return 0;
+}
