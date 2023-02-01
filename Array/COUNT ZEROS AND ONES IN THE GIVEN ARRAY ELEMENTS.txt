@@ -1,0 +1,30 @@
+#include<stdio.h>
+void count_zeros_ones(int no_ele,int arr[])
+{  
+    int index,zero=0,one=0;
+    for(index=0;index<no_ele;index++)
+{
+if(arr[index]==0)
+{
+zero++;
+}
+else
+{
+one++;
+}
+}
+printf("zc = %d\noc = %d",zero,one);
+}
+int main()
+{
+int no_ele,index;
+scanf("%d",&no_ele);
+int arr[no_ele];
+for(index=0;index<no_ele;index++)
+{
+scanf("%d",&arr[index]);
+}
+count_zeros_ones(no_ele,arr);
+
+return 0;
+}
