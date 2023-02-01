@@ -1,0 +1,23 @@
+#include<stdio.h>
+long long int largest_ele(int no_ele,long long int arr[])
+{ 
+    long long int largest,index;
+largest = arr[0];
+for (index = 1; index < no_ele; index++)
+{
+if (largest < arr[index])
+largest = arr[index];
+}
+  return largest;
+}
+int main()
+{
+int  no_ele, index;
+scanf("%d", &no_ele);
+long long int arr[no_ele];
+for (index = 0; index < no_ele; index++)
+scanf("%lld", &arr[index]);
+printf("%lld",largest_ele(no_ele,arr));
+
+return 0;
+}
