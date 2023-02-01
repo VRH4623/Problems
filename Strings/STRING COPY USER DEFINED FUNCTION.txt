@@ -1,0 +1,17 @@
+#include<stdio.h>
+void myStrCopy(char * des ,char *src)
+{
+ int ind;
+ for(ind=0; src[ind]!='\0';ind+=1)
+    des[ind]=src[ind];
+ des[ind]='\0';
+}
+int main()
+{
+char src[100000];
+char des[100000];
+scanf(""%[^\n]s"",src);
+myStrCopy(des,src);
+printf(""%s"",des);
+return 0;
+}
