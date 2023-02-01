@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main(){
+    long long int a;
+    int n=100;
+    printf("Enter The Input : ");
+    scanf("%lld",&a);
+    for(int i=a;i<=n;i++){
+        if(i%2==0){
+            printf("%d ",i);
+        }
+        else{
+            continue;
+        }
+    }
+    
+    printf("\n");
+    
+     for(int j=a;j<=n;j++){
+        if(j%2!=0){
+            printf("%d ",j);
+        }
+        else{
+            continue;
+        }
+    }
+    return 0;
+}
