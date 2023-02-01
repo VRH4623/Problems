@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main(){
+    int num;
+    int rem,rev=0,temp;
+    scanf("%d",&num);
+    temp=num;
+    while(temp){
+        rem=temp%10;
+        rev=rev*10+rem;
+        temp/=10;
+    }
+    if(num==rev)    printf("pali");
+    else printf("no");
+}
