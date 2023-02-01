@@ -1,0 +1,35 @@
+#include<stdio.h>
+long long int second_larg_ele(int no_ele,long long int arr[])
+{
+    long long int largest,secondlarg;
+    int index;
+    largest = arr[0];
+    secondlarg = arr[0];
+for (index = 1; index < no_ele; index++)
+{
+if (largest < arr[index]){
+    secondlarg = largest;
+    largest =  arr[index];
+}
+else if (secondlarg < arr[index]){
+    secondlarg = arr[index];
+}
+else if(secondlarg == largest){
+    secondlarg = arr[index];
+}
+
+
+}
+  return secondlarg;
+}
+int main()
+{
+int  no_ele, index;
+scanf("%d", &no_ele);
+long long int arr[no_ele];
+for (index = 0; index < no_ele; index++)
+scanf("%lld", &arr[index]);
+printf("%lld",second_larg_ele(no_ele,arr));
+
+return 0;
+}
