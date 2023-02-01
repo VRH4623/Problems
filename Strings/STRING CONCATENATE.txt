@@ -1,0 +1,20 @@
+#include<stdio.h>
+void myStrCat(char * des ,char *src)
+{
+ int ind;
+ int d_ind;
+ for(d_ind=0;des[d_ind]!='\0';d_ind+=1);
+ for(ind=0; src[ind]!='\0';ind+=1,d_ind++)
+    des[d_ind]=src[ind];
+ des[d_ind]='\0';
+}
+int main()
+{
+char str1[100000];
+char str2[100000];
+scanf("%s",str1);
+scanf("%s",str2);
+myStrCat(str2,str1);
+printf("%s",str2);
+return 0;
+}
