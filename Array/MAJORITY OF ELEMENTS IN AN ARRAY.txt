@@ -1,0 +1,30 @@
+# include <stdio.h>
+#include<limits.h>
+void Find_majority_ele(int no_ele,long long int arr[]){
+int half_size=no_ele/2;
+int max=INT_MIN,index=-1;
+for(int i=0;i<no_ele;i++){
+	int count=0;
+	for(int j=0;j<no_ele;j++){
+        if(arr[i]==arr[j]) count++;
+    }
+    if(count>max) {
+        max=count;
+	  index=i;
+	 }
+   }
+ if(max>half_size)   printf(\"The majority element is : %d\",arr[index]);
+ else printf(\"No majority element found in the array\");\r\n}
+
+int main()
+{
+int no_ele,index;
+scanf("%d",&no_ele);
+int arr[no_ele];
+for(index=0;index<no_ele;index++)
+{
+scanf("%d",&arr[index]);
+}
+sum_of_ele(no_ele,arr);
+return 0;
+}
