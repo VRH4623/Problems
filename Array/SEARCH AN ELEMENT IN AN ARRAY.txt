@@ -1,0 +1,29 @@
+#include<stdio.h>
+int Search_element(int no_ele,long long int arr[],long long int element)
+{
+   int index = 0;
+while (index < no_ele && element != arr[index]) {
+index++;
+}
+if (index < no_ele)
+  return 1;
+else
+  return 0;
+}
+int main()
+{
+int  no_ele, index;
+scanf("%d", &no_ele);
+long long int element,arr[no_ele];
+for (index = 0; index < no_ele; index++) {
+scanf("%lld", &arr[index]);
+}
+scanf("%lld", &element);
+int result;
+result=Search_element(no_ele,arr,element);
+if(result==1)
+  printf("Found");
+else 
+  printf("Not found");
+
+}
