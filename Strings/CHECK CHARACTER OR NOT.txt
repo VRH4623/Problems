@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    char str[1000], search;
+    int len,ind,flag=0;
+    scanf(""%s\n"",str);
+    scanf(""%c"",&search);
+    for(len=0;str[len]!='\0';len++);
+    for(ind=0;ind<len;ind++)
+    {
+        if(str[ind]==search)
+        {
+            flag=1;
+            break;
+        }
+    }
+    
+    if (flag == 1)
+        printf(""Found"");
+    else
+        printf(""Not Found"");
+ 
+    return 0;
+}
