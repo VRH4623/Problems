@@ -1,0 +1,47 @@
+************************************************(RIGHT ROTATE)
+#include<stdio.h>
+void rotate(int[], int);
+int main(){
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++){
+       scanf("%d",&a[i]); 
+    }
+    rotate(a,n);
+}
+void rotate(int a[], int n){
+    int safe = a[n-1];
+    for(int i=n-1;i>=1;i--){
+        a[i]=a[i-1];
+    }
+    a[0] = safe;
+    
+    for(int j=0;j<n;j++){
+        printf("%d ",a[j]);
+    }
+}
+
+*******************************************(LEFT ROTATE)	
+#include<stdio.h>
+void rotate(int[], int);
+int main(){
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++){
+       scanf("%d",&a[i]); 
+    }
+    rotate(a,n);
+}
+void rotate(int a[], int n){
+    int safe = a[0];
+    for(int i=n;i<n-1;i++){
+        a[i]=a[i-1];
+    }
+    a[n-1] = safe;
+    
+    for(int j=0;j<n;j++){
+        printf("%d ",a[j]);
+    }
+}
