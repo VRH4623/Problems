@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+   int a;
+   int n;
+   scanf("%d",&n);
+   int c;
+   for(int i=1;i<=n;i++){
+       if(n%i==0){
+           c+=1;
+       }
+   }
+   if(c==2){
+       printf("P");
+   }
+   else{
+       printf("C");
+   }
+}
