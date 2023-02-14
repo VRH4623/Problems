@@ -1,0 +1,19 @@
+#include<stdio.h>
+int right_to_left(int n){
+    int bin;
+    int right =0;
+    while(n){
+        bin = n%10;
+        right = right*10+bin;
+        n/=10;
+    }
+    return right;
+}
+
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    right_to_left(n);
+    printf("%d",right_to_left(n));
+}
