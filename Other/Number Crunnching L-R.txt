@@ -1,0 +1,21 @@
+#include<stdio.h>
+void left_to_right(int n){
+    int bin=0;
+    int place  = 1;
+    int left =0;
+    while(n){
+        bin  = n%10;
+        left = place*bin+left;
+        place*=10;
+        n/=10;
+    }
+    printf("%d",left);
+}
+
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    left_to_right(n);
+    return 0;
+}
